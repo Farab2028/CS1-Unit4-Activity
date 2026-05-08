@@ -11,6 +11,7 @@ const body = document.querySelector("body");
 const heading = document.querySelector("#main-heading");
 const description = document.querySelector("#description");
 const toggleBtn = document.querySelector("#toggle");
+const image = document.querySelector("#image");
 
 // Now we can change styles & atrributes for those elements
 heading.style.color = "purple"; // JS wrote CSS code...
