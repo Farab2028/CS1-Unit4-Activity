@@ -28,9 +28,17 @@ pastelBtn.addEventListener("click", setPastel);
 function setPastel() {
    console.log("setting pastel theme...");
    body.style.background = "rgb(0, 0, 0)";
-   body.style.color = "rgb(9, 225, 83)";
+   body.style.color = "rgb(9, 171, 225)";
    body.style.fontFamily = "monospace";
    description.textContent = "WELCOME TO PASTEL MODE!";
+   image.src = "pastel.jpg"
+   heading.textContent = "PASTEL!";
+   body.style.background = "lavender";
+   heading.style.backgroundSize = "cover";
+   heading.style.margin = "20px";
+
+
+   
 }
 
 // TOGGLE between light & dark mode
@@ -42,13 +50,41 @@ function toggleMode() {
    console.log(darkMode);
    if (darkMode == true) {
       console.log("apply dark mode styles");
+      body.style.background = "rgb(0, 0, 0)";
+      heading.style.color = "lightgrey";
+      description.style.color = "white";
+      description.textContent = "Welcome to dark side ";
+      toggleBtn.textContent = "Switch to Light";
+      image.src = "night time.jpg";
 
    }
    else {
       console.log("apply light mode styles");
+      body.style.background = "white";
+      heading.style.color = "darkgrey";
+      description.style.color = "rgb(0, 0, 0)";
+      description.textContent = "Welcome to light side ";
+      toggleBtn.textContent = "Switch to Dark";
+      image.src = "Daytime.jpg";
 
    }
 }
+
+   const neonBtn = document.querySelector("#neon");
+   neonBtn.addEventListener("click", setNeonMode);
+   function setNeonMode() {
+      body.style.background = "linear-gradient(blue, pink)";
+      body.style.fontFamily = "monospace";
+      description.style.color = "rgb (64, 225, 0)";
+      description.textContent = "WELCOME TO NEON MODE";
+      image.src = "neon.jpg";
+      heading.textContent = "NEON!";
+
+   }
+
+
+
+
 
 
 
