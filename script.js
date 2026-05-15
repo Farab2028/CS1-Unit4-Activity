@@ -12,6 +12,8 @@ const heading = document.querySelector("#main-heading");
 const description = document.querySelector("#description");
 const toggleBtn = document.querySelector("#toggle");
 const image = document.querySelector("#image");
+const emoji = document.querySelector("#emoji");
+
 
 // Now we can change styles & atrributes for those elements
 heading.style.color = "purple"; // JS wrote CSS code...
@@ -36,9 +38,7 @@ function setPastel() {
    body.style.background = "lavender";
    heading.style.backgroundSize = "cover";
    heading.style.margin = "20px";
-
-
-   
+   emoji.classList.add("animated");
 }
 
 // TOGGLE between light & dark mode
@@ -49,6 +49,7 @@ function toggleMode() {
    darkMode = !darkMode; // flip the boolean
    console.log(darkMode);
    if (darkMode == true) {
+      heading.textContent = "dark mode";
       console.log("apply dark mode styles");
       body.style.background = "rgb(0, 0, 0)";
       heading.style.color = "lightgrey";
@@ -60,6 +61,7 @@ function toggleMode() {
    }
    else {
       console.log("apply light mode styles");
+      heading.textContent = "light mode";
       body.style.background = "white";
       heading.style.color = "darkgrey";
       description.style.color = "rgb(0, 0, 0)";
